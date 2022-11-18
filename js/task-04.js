@@ -1,12 +1,13 @@
-const counter = {};
-decrementBtn: document.querySelector('[data-action="decrement"]');
-incrementBtn: document.querySelector('[data-action="increment"]');
-valueEl: document.querySelector("#value");
+const counter = {
+  decrementBtn: document.querySelector('[data-action="decrement"]'),
+  incrementBtn: document.querySelector('[data-action="increment"]'),
+  valueEl: document.querySelector("#value"),
+};
 
 let counterValue = 0;
 
 counter.decrementBtn.addEventListener("click", decrement);
-counter.incrementBtb.addEventListener("click", increment);
+counter.incrementBtn.addEventListener("click", increment);
 
 function decrement() {
   counterValue -= 1;
@@ -19,5 +20,5 @@ function increment() {
 }
 
 function changeValueEl(value) {
-  counter.valueEl.textContent(value);
+  counter.valueEl.textContent = value;
 }
